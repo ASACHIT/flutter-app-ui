@@ -1,16 +1,17 @@
-# ui
 
-A new Flutter project.
+# Cloth app UI
 
-## Getting Started
+A simple cloth app Ui in Flutter, home page and login page
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Home page
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![App Screenshot](https://user-images.githubusercontent.com/73944456/157197356-e5f71b57-a529-41a5-a8d3-58c37ee296c3.png)
+## login page
+![App Screenshot](https://user-images.githubusercontent.com/73944456/157197424-a071dee4-5d47-4265-9289-fcc271f1a57d.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Demo
+
+https://www.facebook.com/100024256128513/videos/652706112719082/
+
