@@ -10,81 +10,82 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-          backgroundColor: Colors.white,
-          body: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+    var safeArea = MediaQuery.of(context).padding.top;
+    return Scaffold(
+        floatingActionButton: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: 80,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 50),
-                  child: Image.asset('assets/shop.png'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 45),
-                  child: Text("Style With Confidence",
-                      style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color.fromARGB(255, 63, 61, 86))),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 10),
-                  child:
-                      Text("It's not about the brand,\n it's about the style.",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Color.fromARGB(164, 63, 61, 86),
-                            fontSize: 15,
-                            fontWeight: FontWeight.w100,
-                          )),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 80, right: 20),
-                  child: Align(
-                    alignment: Alignment.bottomRight,
-                    child: FloatingActionButton(
-                      backgroundColor: const Color.fromARGB(255, 63, 61, 86),
-                      onPressed: () {
-                        Navigator.pushNamed(context, "/login");
-                      },
-                      child: const Icon(
-                        Icons.arrow_forward,
-                        color: Colors.white,
-                      ),
+                Row(
+                  children: const [
+                    Icon(
+                      Icons.circle,
+                      size: 15,
+                      color: Color.fromARGB(166, 54, 53, 63),
                     ),
-                  ),
+                    Icon(
+                      Icons.circle,
+                      size: 15,
+                      color: Color.fromARGB(255, 63, 61, 86),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 5),
-                        child: Container(
-                          width: 10,
-                          height: 10,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color.fromARGB(166, 54, 53, 63),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: 10,
-                        height: 10,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color.fromARGB(255, 63, 61, 86),
-                        ),
-                      ),
-                    ],
+                InkWell(
+                  onTap: () => Navigator.pushNamed(context, "/login"),
+                  child: Container(
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: const Color.fromARGB(255, 63, 61, 86),
+                    ),
+                    child: const Icon(
+                      Icons.arrow_forward,
+                      color: Colors.white,
+                    ),
                   ),
                 )
               ],
             ),
-          )),
-    );
+          ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        backgroundColor: Colors.white,
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: safeArea,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 50),
+                child: Image.asset('assets/shop.png'),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 45),
+                child: Text("Style With Confidence",
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 63, 61, 86))),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 10),
+                child: Text("It's not about the brand,\n it's about the style.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Color.fromARGB(164, 63, 61, 86),
+                      fontSize: 15,
+                      fontWeight: FontWeight.w100,
+                    )),
+              ),
+            ],
+          ),
+        ));
   }
 }
