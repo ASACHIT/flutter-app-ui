@@ -1,5 +1,3 @@
-// ignore_for_file: camel_case_types
-
 import 'package:flutter/material.dart';
 
 class login extends StatefulWidget {
@@ -17,31 +15,16 @@ class _loginState extends State<login> {
           backgroundColor: Colors.white,
           body: SingleChildScrollView(
             child: Column(
-              // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
-                    // set few padding in top
                     padding: const EdgeInsets.only(top: 50),
                     child: Image.asset(
                       "assets/login.png",
                       width: 350,
                     )),
                 Row(
-                  children: const [
-                    // Padding(
-                    //   // set few padding in top
-                    //   padding: EdgeInsets.only(left: 30),
-                    //   child: Text("Let's \n get started",
-                    //       textAlign: TextAlign.left,
-                    //       style: TextStyle(
-                    //           fontSize: 30,
-                    //           fontWeight: FontWeight.w600,
-                    //           color: Color.fromARGB(255, 63, 61, 86))),
-                    // ),
-                    /// add a rich text
-                  ],
+                  children: const [],
                 ),
-                // create a login form
                 Padding(
                   padding: const EdgeInsets.only(top: 30),
                   child: SizedBox(
@@ -102,7 +85,6 @@ class _loginState extends State<login> {
                     ),
                   ),
                 ),
-                // create a textbutton
                 Padding(
                   padding: const EdgeInsets.only(top: 30),
                   child: SizedBox(
